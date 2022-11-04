@@ -7,8 +7,6 @@ version = "1.0.0-SNAPSHOT"
 subprojects {
     version = rootProject.version
 
-    apply<JavaLibraryPlugin>()
-
     repositories {
         // enable resolving dependencies from the inductive automation artifact repository
         maven(url = "https://nexus.inductiveautomation.com/repository/public")
@@ -22,7 +20,7 @@ ignitionModule {
     id.set("com.inductiveautomation.training.example")
     moduleVersion.set("${project.version}")
     moduleDescription.set("A sample project companion piece for Inductive Automation's SDK training.")
-    requiredIgnitionVersion.set("8.1.0")
+    requiredIgnitionVersion.set(libs.versions.ignition)
 
     projectScopes.putAll(
         mapOf(

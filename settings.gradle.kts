@@ -13,5 +13,6 @@ include(
     ":common",
     ":client",
     ":designer",
+    ":designer-launcher",
     ":gateway"
 )

@@ -1,0 +1,3 @@
+[versions]
+java = "11"
+ignition = "8.1.21"

@@ -1,3 +1,14 @@
+plugins {
+    `java-library`
+}
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(libs.versions.java.get()))
+    }
+}
+
 dependencies {
-    compileOnly("com.inductiveautomation.ignitionsdk:ignition-common:8.1.0")
+    val ignitionSdkVersion = libs.versions.ignition.get()
+    implementation("com.inductiveautomation.ignitionsdk", "ignition-common", ignitionSdkVersion)
 }
